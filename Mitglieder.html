@@ -1,0 +1,85 @@
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>B R A T W A</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+  <link href="favicon.ico" rel="icon" type="image/ico"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="css/animate.css" rel="stylesheet"/>
+  <link href="css/YTPlayer.css" media="all" rel="stylesheet" type="text/css"/>
+  <script src="js/title.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/marquee.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script><script src="inc/jquery.mb.YTPlayer.js"></script>
+</head>
+<body>
+  <div class="center">
+    <center>
+      <h1 style="font-size: 3rem;">L E A D E R</h1>
+      <h2 id="time">00:00:00</h2>
+      © belaruee & jb201
+    </center>
+
+
+    <center class="animated fadeInLeft">
+      <img src="x.png" style="width: 10rem;" draggable="false">
+      <br><br>
+      <div style="max-width: 75rem; font-size: 1.25rem;" onclick="home()">
+        <h5>
+          Whise Original Gangster - Rang 12 | Johnny Belarue @DC:jb201 
+         </h5>
+         <h5>
+          Big Original Gangster - Rang 11 | Jango Belarue @DC:belaruee
+        </h5>
+        <h5>
+          Original Gangster - Rang 10 | Matron Floré @DC:.martron  
+        <h5>
+        </h5>
+        <h5>
+        </h5>
+        <h5>          
+         
+        </h5>
+      </div>
+
+    </center>
+  </div>
+
+  <script>
+    setInterval(function() {
+      const date = new Date();
+      document.getElementById('time').innerText = date.toLocaleTimeString();
+      document.getElementById('day').innerText = date.toLocaleDateString('en-US', { weekday: 'long' });
+      document.getElementById('date').innerText = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }, 1000);
+
+    document.onkeydown = function(e) {
+      if(e.keyCode == 123) {
+        return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+        return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        return false;
+      }
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        return false;
+      }
+    }
+
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+    function home() {
+      window.location.replace("index.html");
+    }
+  </script>
+</body>
+</html>

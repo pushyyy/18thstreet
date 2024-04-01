@@ -1,0 +1,97 @@
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>B R A T W A</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+  <link href="favicon.ico" rel="icon" type="image/ico"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="css/animate.css" rel="stylesheet"/>
+  <link href="css/YTPlayer.css" media="all" rel="stylesheet" type="text/css"/>
+  <script src="js/title.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/marquee.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script><script src="inc/jquery.mb.YTPlayer.js"></script>
+</head>
+<body>
+  <div class="center">
+    <center>
+      <h1 style="font-size: 3rem;">G E S C H Ä F T E</h1>
+      <h2 id="time">00:00:00</h2>
+      <h3 id="day">Monday</h3>
+      <h3 id="date">Febuary 5, 2024</h3>
+    </center>
+
+
+    <center class="animated fadeInLeft">
+      <img src="x.png" style="width: 10rem;" draggable="false">
+      <br><br>
+      <div style="max-width: 75rem; font-size: 1.25rem;" onclick="home()">
+        <h5>
+            | WAFFENHANDEL |   
+        </h5>
+        <h5>
+            Das Kartell beliefert uns Tag täglich mit irgendwelchen schönen Langwaffen,
+
+            Doch warum sollten wir all dies nur für uns behalten? 
+            Stattdesen haben wir uns zur Aufgaben genommen einiger unserer selbst gebauten und vom Kartell gelieferten Waffen an all die kleinkriminellen im Untergrund zu verkaufen.
+        </h5>
+        <h5>
+            | ÜBERFÄLLE |
+        </h5>
+        <h5>
+            Wir sind Diebe! Das ist nunmal unsere Natur. Ohne Raubüberfälle und Geiselnahmen würde all das was wir machen überhaupt keinen Sinn ergeben.
+
+            Wir müssen Kämpfen um etwas zu erreichen, klar einige verstehen das nicht aber andere wiederrum befinden sich genau in derselben lage. 
+            Sie müssen eine Familie ernähren, schauen das sie einen Dach überm Kopf haben all dies ist nicht unbedingt einfach wenn man in Armut lebt. 
+            Daher gehen wir öfter mal einen laden überfallen! 
+        </h5>
+        <h5>
+            | DROGENHANDEL |
+        </h5>
+        <hs5>
+            Die Treue der Kundschaft ist sehr Wichtig! Daher hat sich unser Gründer der Bratwa damals überlegt die Droge Routen an sich zu reißen und es an seiner Kundschaft weiter zu verkaufen. 
+            Klar kommen die Drogen nicht von alleine, daher werde wir auch unsere Arbeiter dafür haben die uns täglich beliefern.
+        </hs5>
+      </div>
+
+    </center>
+  </div>
+
+  <script>
+    setInterval(function() {
+      const date = new Date();
+      document.getElementById('time').innerText = date.toLocaleTimeString();
+      document.getElementById('day').innerText = date.toLocaleDateString('en-US', { weekday: 'long' });
+      document.getElementById('date').innerText = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    }, 1000);
+
+    document.onkeydown = function(e) {
+      if(e.keyCode == 123) {
+        return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+        return false;
+      }
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        return false;
+      }
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        return false;
+      }
+    }
+
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+    function home() {
+      window.location.replace("index.html");
+    }
+  </script>
+</body>
+</html>
